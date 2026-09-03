@@ -88,9 +88,11 @@ while ! check_prereqs; do
   printf '\n'
 done
 
-if chezmoi source-path >/dev/null 2>&1; then
+source_path=$(chezmoi source-path 2>/dev/null || true)
+
+if [ -n "$source_path" ] && [ -d "$source_path" ]; then
   printf 'chezmoi is already initialized at:\n'
-  chezmoi source-path
+  printf '%s\n' "$source_path"
 else
   chezmoi init "$REPO_URL"
 fi
