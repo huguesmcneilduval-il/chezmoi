@@ -1,0 +1,13 @@
+[user]
+    name = {{ .git_name | quote }}
+    email = {{ .git_email | quote }}
+    signingkey = {{ .git_signing_key | quote }}
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[tag]
+    gpgsign = true
