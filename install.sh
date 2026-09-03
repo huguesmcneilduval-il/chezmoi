@@ -98,7 +98,7 @@ else
 fi
 
 printf '\nShowing pending chezmoi changes:\n\n'
-chezmoi diff
+chezmoi --no-pager diff
 
 printf '\nApply these changes? [y/N] '
 read -r answer
