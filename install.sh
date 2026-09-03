@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-REPO_URL="https://github.com/huguesmcneilduval-il/chezmoi.git"
+REPO_URL="git@github.com:huguesmcneilduval-il/chezmoi.git"
 
 case "$(uname -s)" in
   Darwin|Linux)
